@@ -1,5 +1,5 @@
 from django.db import models
-# from ckeditor.fields import RichTextField
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 class Page(models.Model):
@@ -8,8 +8,7 @@ class Page(models.Model):
     verbose_name="Título"
   )
 
-  content = models.TextField(
-  # content = RichTextField(
+  content = RichTextField(
     verbose_name="Contenido"
   )
 
