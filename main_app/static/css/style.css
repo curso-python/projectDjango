@@ -1,0 +1,243 @@
+/* Estilos generales */
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif, Arial, Helvetica;
+}
+
+.clearfix {
+  float: none;
+  clear: both;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+/* header */
+header {
+  width: 1212px;
+  height: 140px;
+  background-color: #23232b;
+  margin: 0 auto;
+}
+
+#logotipo {
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 10px;
+}
+
+#logotipo img {
+  display: block;
+  width: 60px;
+  margin-top: 20px;
+  float: left;
+}
+
+#logotipo h1 {
+  display: block;
+  float: left;
+  font-weight: normal;
+  color: #2ba876;
+  padding: 30px 0 0 20px;
+}
+
+/* Barra de navegación */
+nav {
+  width: 1250px;
+  height: 42px;
+  background-color: #1b1e1f;
+  border: 1px solid #333333;
+  margin: 0 auto;
+  box-shadow: 0px 22px 22px gray;
+  font-size: 15px;
+}
+
+nav ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+nav ul li {
+  line-height: 40px;
+  float: left;
+}
+
+nav ul li a {
+  display: block;
+  float: left;
+  text-decoration: none;
+  padding: 0 20px;
+  color: #d1d4d6;
+}
+
+nav ul li a:hover {
+  background-color: #2ba876;
+  box-shadow: 0 0 5px #333333 inset;
+  color: white;
+  transition: all 300ms;
+}
+
+.barra {
+  width: 1250px;
+  margin: 0 auto;
+}
+
+.esquina-izquierda {
+  display: block;
+  border-left: 20px solid transparent;
+  border-top: 10px solid #2b2f30;
+  float: left;
+}
+
+.esquina-derecha {
+  display: block;
+  border-right: 20px solid transparent;
+  border-top: 10px solid #2b2f30;
+  float: right;
+}
+
+.relleno-barra {
+  display: block;
+  float: left;
+  width: 1210px;
+  height: 10px;
+  background-color: #2b2f30;
+}
+
+/* Estilos contenido central */
+
+#content {
+  width: 1212px;
+  min-height: 630px;
+  margin: 30px auto;
+}
+
+.box {
+  background-color: white;
+  width: 95%;
+  min-height: 630px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.title {
+  color: #444;
+  letter-spacing: 1px;;
+}
+
+.article-item {
+  margin: 20px 0;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  clear: both;
+}
+
+.article-item .image {
+  width: 200px;
+  height: 200px;
+  float: left;
+  overflow: hidden;
+}
+
+.article-item .data {
+  float: left;
+  padding: 15px;
+}
+
+.article-item image {
+  height: 200px;
+}
+
+.date {
+  font-size: 15px;
+  color: gray;
+  margin: 15px 0;
+  display: block;
+}
+
+.content {
+  line-height: 25px;
+}
+
+.btn {
+  padding: 10px;
+  background-color: rgb(146, 3, 3);
+  color: white;
+  display: block;
+  margin-top: 20px;
+  width: 80px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+footer {
+  width: 1250px;
+  background-color: #1b1e1f;
+  border: 1px solid #333;
+  color: #d1d4d6;
+  text-align: center;
+  padding: 10px 0;
+  box-shadow: 0 0 20px gray;
+  margin: 0 auto;
+}
+
+.box ul, .box li{
+  padding-left: 10px;
+}
+
+.box form {
+  width: 40%;
+}
+
+.box form input,
+.box form label {
+  display: block;
+  margin: 5px 0;
+}
+
+.box form input[type="text"],
+.box form textarea,
+.box form select {
+  padding: 5px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.box form select {
+  width: 100px;
+}
+
+.box form textarea {
+  resize: none;
+}
+
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button {
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #2ba876;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 5px;
+  transition: 300ms all;
+}
+
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button:hover{
+  cursor: pointer;
+  background-color: #1d7a55;
+  transition: 300ms all;
+}
+
+.red {
+  color: red;
+}

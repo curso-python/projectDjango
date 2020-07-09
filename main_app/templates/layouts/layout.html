@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>
+    {% block title %}
+      <!--titulo de cada página-->
+    {% endblock %}
+    | Abel Alonso
+  </title>
+  {% load static %}
+  <link rel="stylesheet" type)"text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+  <header>
+    <div id="logotipo">
+      <img src="{%static 'images/logo.png'%}">
+      <h1>Proyecto con django</h1>
+    </div>
+  </header>
+  <nav>
+      <ul>
+        <li><a href="{% url 'index' %}">Inicio</a></li>
+        {% for page in pages %}
+          <li>
+            <a href="{% url 'page' page.2 %}">{{page.1}}</a>
+          </li>
+        {% endfor %}
+        
+      </ul>
+  </nav>
+
+  <div class="barra">
+    <span class="esquina-izquierda"></span>
+    <span class="relleno-barra"></span>
+    <span class="esquina-derecha"></span>
+  </div>
+
+  <div id="content">
+    <div class="box">
+      {% block content %}
+        <strong>Contenido del bloque original!!!</strong>
+      {% endblock content %}
+    </div>
+  </div>
+
+  <footer>
+    Master en Python &copy; Abel Alonso - {% now "d/M/Y h:m" %}
+  </footer>
+</body>
