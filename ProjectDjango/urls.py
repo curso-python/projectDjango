@@ -15,11 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from main_app import views as main_views
-from pages import views as page_views
+from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main_app.urls')),
-    path('pagina/', include('pages.urls'))
+    path('pagina/', include('pages.urls')),
+    path('articulo/', include('blog.urls'))
 ]
+
+# Ruta imágenes
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

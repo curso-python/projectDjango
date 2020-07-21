@@ -27,7 +27,17 @@
             <a href="{% url 'page' page.2 %}">{{page.1}}</a>
           </li>
         {% endfor %}
-        
+        <li>
+          <a href="{% url 'list' %}">Blog</a>
+          <ul>
+            <li>
+              <a href="{% url 'list' %}">Categoria 1</a>
+            </li>
+            <li>
+              <a href="{% url 'list' %}">Categoria 2</a>
+            </li>
+          </ul>
+        </li>
       </ul>
   </nav>
 

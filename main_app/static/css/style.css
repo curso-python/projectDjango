@@ -56,17 +56,17 @@ nav {
   font-size: 15px;
 }
 
-nav ul {
+nav > ul {
   list-style: none;
   text-decoration: none;
 }
 
-nav ul li {
+nav > ul > li {
   line-height: 40px;
   float: left;
 }
 
-nav ul li a {
+nav > ul > li > a {
   display: block;
   float: left;
   text-decoration: none;
@@ -74,11 +74,52 @@ nav ul li a {
   color: #d1d4d6;
 }
 
-nav ul li a:hover {
+nav > ul > li > a:hover {
   background-color: #2ba876;
   box-shadow: 0 0 5px #333333 inset;
   color: white;
   transition: all 300ms;
+}
+
+nav > ul > li > ul {
+  display: none;
+  position: absolute;
+  color: white;
+  text-align: left;
+  width: 160px;
+  box-shadow: 0 2px 2px gray;
+}
+
+nav > ul > li:hover > ul {
+  display: block;
+  padding-top: 40px;
+  color: white;
+  margin: 0;
+  list-style: none;
+}
+
+nav > ul > li:hover > ul > li {
+  background: #f2f1f0;
+  border-bottom: 1px solid #d6d6d6;
+  padding: 8px;
+  line-height: 25px;
+  font-size: 13px;
+  transition: all 300ms;
+}
+
+nav > ul > li:hover > ul > li a {
+  color: #666;
+  transition: all 300ms;
+  text-decoration: none;
+}
+
+nav > ul > li:hover > ul > li:hover {
+  background-color: #2ba876;
+}
+
+nav > ul > li:hover > ul > li:hover a{
+  color: white;
+  display: block;
 }
 
 .barra {
@@ -141,8 +182,19 @@ nav ul li a:hover {
 .article-item .image {
   width: 200px;
   height: 200px;
+  margin: 0 auto;
   float: left;
   overflow: hidden;
+  position: relative;
+  
+}
+.article-item .image img{
+  position: absolute;
+  margin: auto;
+  top: -9999px;
+  bottom: -9999px;
+  right: -9999px;
+  left: -9999px;
 }
 
 .article-item .data {

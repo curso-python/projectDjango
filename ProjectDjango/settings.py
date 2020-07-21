@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'main_app',
-    'pages.apps.PagesConfig'
+    'pages.apps.PagesConfig',
+    'blog.apps.BlogConfig'
 ]
 
 MIDDLEWARE = [
@@ -135,3 +136,7 @@ CKEDITOR_CONFIGS = {
         ]
     }
 }
+
+# Media
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
