@@ -167,6 +167,14 @@ nav > ul > li:hover > ul > li:hover a{
   margin: 0 auto;
 }
 
+.box a{
+  color: #444;
+}
+
+.box a:hover{
+  transition: all 200ms;
+  color: #2ba977
+}
 .title {
   color: #444;
   letter-spacing: 1px;;

@@ -21,7 +21,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('main_app.urls')),
     path('pagina/', include('pages.urls')),
-    path('articulo/', include('blog.urls'))
+    path('articulo/', include('blog.urls')),
 ]
 
 # Ruta imágenes

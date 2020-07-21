@@ -29,13 +29,15 @@
         {% endfor %}
         <li>
           <a href="{% url 'list' %}">Blog</a>
+        </li>
+        <li>
+          <a href="#">Categorias</a>
           <ul>
+          {% for category in categories %}
             <li>
-              <a href="{% url 'list' %}">Categoria 1</a>
+              <a href="{% url 'category' category.0%}">{{category.1}}</a>
             </li>
-            <li>
-              <a href="{% url 'list' %}">Categoria 2</a>
-            </li>
+          {% endfor %}
           </ul>
         </li>
       </ul>
@@ -49,6 +51,7 @@
 
   <div id="content">
     <div class="box">
+      {{ids}}
       {% block content %}
         <strong>Contenido del bloque original!!!</strong>
       {% endblock content %}
