@@ -15,34 +15,39 @@ def about(request):
   })
 
 def register_page(request):
-  register_form = RegisterForm()
+  if request.user.is_autenticated:
+    return redirect('index')
+  else:
+    register_form = RegisterForm()
+    if request.method == 'POST':
+      register_form = RegisterForm(request.POST)
+      if register_form.is_valid:
+        register_form.save()
+        messages.success(request, 'Te has registrado correctamente')
+        return redirect('index')
 
-  if request.method == 'POST':
-    register_form = RegisterForm(request.POST)
-    if register_form.is_valid:
-      register_form.save()
-      messages.success(request, 'Te has registrado correctamente')
-      return redirect('index')
-
-  return render(request, 'users/register.html', {
-    'title': 'Registro',
-    'register_form': register_form
-  })
+    return render(request, 'users/register.html', {
+      'title': 'Registro',
+      'register_form': register_form
+    })
 
 def login_page(request):
-  if request.method == 'POST':
-    username = request.POST.get('username')
-    password = request.POST.get('password')
-    user = authenticate(request, username=username, password=password)
-    if user is not None:
-      login(request, user)
-      return redirect('index')
-    else:
-      messages.warning(request, 'No te has identificado correctamente')
+  if request.user.is_autenticated:
+    return redirect('index')
+  else:
+    if request.method == 'POST':
+      username = request.POST.get('username')
+      password = request.POST.get('password')
+      user = authenticate(request, username=username, password=password)
+      if user is not None:
+        login(request, user)
+        return redirect('index')
+      else:
+        messages.warning(request, 'No te has identificado correctamente')
 
-  return render(request, 'users/login.html', {
-    'title': 'Identifícate'
-  })
+    return render(request, 'users/login.html', {
+      'title': 'Identifícate'
+    })
 
 def logout_page(request):
   logout(request)
