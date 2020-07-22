@@ -262,6 +262,8 @@ footer {
 }
 
 .box form input[type="text"],
+.box form input[type="email"],
+.box form input[type="password"],
 .box form textarea,
 .box form select {
   padding: 5px;
@@ -300,4 +302,18 @@ footer {
 
 .red {
   color: red;
+}
+
+.message,
+.alert,
+.alert-success {
+  padding: 20px;
+  background: #1f7e58;
+  color: white;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.alert-warning {
+  background: red;
 }
